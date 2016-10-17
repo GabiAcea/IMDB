@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  height: auto;
+}
+
+.container {
+  background-color: yellow;
+  height: 1200px;
+}
+
+.navigation-bar {
+
+}
+
+.blank-top-bar {
+  
+}
+
+.details-top-bar {
+
+}
