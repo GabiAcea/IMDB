@@ -38,6 +38,11 @@ body {
   padding: 15px;
 }
 
+.imdb_logo_image {
+  height: 49px;
+  width: 101px;
+}
+
 .details-top-bar {
   background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
   border-top: 1px solid #444444;
@@ -75,6 +80,8 @@ body {
   margin-left: 1px;
   border-radius: 0 5px 5px 0;
   opacity: 0.8;
+  height: 34px;
+  width: 35px;
   filter: alpha(opacity=80);
 }
 
@@ -104,6 +111,8 @@ body {
 .facebook_icon, .twitter_icon, .instagram_icon {
   border-radius: 50%;
   margin-right: 5px;
+  width: 31px;
+  height: 31px;
 }
 
 .lower_content {
