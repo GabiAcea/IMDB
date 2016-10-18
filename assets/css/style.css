@@ -4,22 +4,109 @@
 }
 
 body {
-  height: auto;
+  background-color: rgb(227,226,221);
+  height: 1200px;
+  width: 1035px;
+  margin: auto;
+  padding: 0;
+}
+
+.left {
+  float: left;
 }
 
 .container {
-  background-color: yellow;
+  background-color: #575757;
   height: 1200px;
+  width: 1035px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  position: relative;
 }
 
 .navigation-bar {
-
+  padding-top: 15px;
 }
 
 .blank-top-bar {
-  
+
+}
+
+.imdb_logo {
+  width: 101px;
+  height: 49px;
+  padding: 15px;
 }
 
 .details-top-bar {
+  background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
+  border-top: 1px solid #444444;
+  color: #fff;
+  font: 10pt Verdana, Arial, sans-serif;
+  height: 83px;
+  /*margin: 15px auto 0 0;*/
+  padding: 0;
+  position: relative;
+  width: 1035px;
+  z-index: 200;
+}
 
+.nav_bar_content {
+  margin-top: 8px;
+}
+
+.search_movie_bar {
+  width: 419px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+}
+
+.search_category {
+  height: 34px;
+  margin-left: 1px;
+}
+
+.search_category:hover {
+  background-color: #d1d2d3;
+}
+
+.search_icon {
+  margin-left: 1px;
+  border-radius: 0 5px 5px 0;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.imdb_pro_icon {
+  padding: 10px;
+  margin-left: 25px;
+}
+
+.segment_line {
+  padding: 10px;
+  font-style: normal;
+  color: #888888;
+  font-size: 11px;
+}
+
+.help_link {
+  color: white;
+  text-decoration: none;
+  line-height: 35px;
+  margin: 0 15px 0 3px;
+}
+
+.help_link:hover {
+  text-decoration: underline;
+}
+
+.facebook_icon, .twitter_icon, .instagram_icon {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.lower_content {
+  min-height: 100%;
+  background-color: white;
 }
