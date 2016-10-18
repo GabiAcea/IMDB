@@ -22,6 +22,9 @@ body {
   margin: 0 auto;
   padding-bottom: 15px;
   position: relative;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
 }
 
 .navigation-bar {
@@ -60,15 +63,21 @@ body {
   margin-top: 8px;
 }
 
+.upper_nav_content {
+  width: auto;
+  height: 35px;
+}
+
 .search_movie_bar {
   width: 419px;
-  height: 20px;
+  height: 15px;
   border-radius: 5px 0 0 5px;
   padding: 5px;
 }
 
 .search_category {
-  height: 34px;
+  width: 100px;
+  height: 29px;
   margin-left: 1px;
 }
 
@@ -80,18 +89,18 @@ body {
   margin-left: 1px;
   border-radius: 0 5px 5px 0;
   opacity: 0.8;
-  height: 34px;
-  width: 35px;
+  height: 28px;
+  width: 30px;
   filter: alpha(opacity=80);
 }
 
 .imdb_pro_icon {
-  padding: 10px;
+  padding: 8px;
   margin-left: 25px;
 }
 
 .segment_line {
-  padding: 10px;
+  padding: 8px;
   font-style: normal;
   color: #888888;
   font-size: 11px;
@@ -100,7 +109,7 @@ body {
 .help_link {
   color: white;
   text-decoration: none;
-  line-height: 35px;
+  line-height: 30px;
   margin: 0 15px 0 3px;
 }
 
@@ -115,7 +124,64 @@ body {
   height: 31px;
 }
 
+.lower_nav_content {
+  width: auto;
+  height: 34px;
+}
+
+.dropdown_nav_categories {
+  width: 125px;
+  height: 40px;
+  border-left: 1px solid darkgray;
+  padding-left: 18px;
+  border-width: 1px;
+  -moz-border-image: -moz-linear-gradient(top, #888888 0%, #000000 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, #888888 0%, #000000 100%);
+  border-image: linear-gradient(to bottom, #888888 0%, #000000 100%);
+  border-image-slice: 1;
+}
+
+.dropdown_nav_categories a {
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown_nav_categories a:hover {
+  text-decoration: underline;
+}
+
+.category_watchlist a{
+  line-height: 35px;
+  color: #f5de50
+}
+
+.category_watchlist {
+    width: 90px;
+}
+
+.facebook_sign_in {
+  padding-left: 18px;
+  border-width: 1px;
+  border-left: 1px solid darkgray;
+  -moz-border-image: -moz-linear-gradient(top, #888888 0%, #000000 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, #888888 0%, #000000 100%);
+  border-image: linear-gradient(to bottom, #888888 0%, #000000 100%);
+  border-image-slice: 1;
+}
+
+.facebook_sign_in a {
+  color: white;
+  text-decoration: none;
+  background-color: #3B5998;
+  border: 1px solid #3B5998;
+  padding: 3px 8px 3px 8px;
+  font-size: 78%;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 .lower_content {
-  min-height: 100%;
+  min-height: 50%;
   background-color: white;
 }
