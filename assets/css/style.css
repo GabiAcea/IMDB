@@ -185,3 +185,32 @@ body {
   min-height: 50%;
   background-color: white;
 }
+
+.lower_content_left {
+  height: 600px;
+  width: 655px;
+}
+
+.lower_content_right {
+  height: 600px;
+  width: 377px;
+  border-left: 3px solid darkgray;
+}
+
+.movie_details {
+  height: 159px;
+  background-color: #333;
+}
+
+.movie_menu li {
+  display: inline;
+}
+
+.movie_menu a {
+  text-decoration: none;
+  color: silver;
+}
+
+.movie_menu {
+  padding: 15px 20px 0 20px
+}
