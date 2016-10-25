@@ -7,32 +7,28 @@ function searchMovieByTitle() {
       url: "http://www.omdbapi.com/?t=" + input_data + "&plot=short&r=json",
       cache: false,
       success: function(data){
-        var details_block = document.getElementById('movie_details_section'),
-            node = document.createElement('p'),
-            actors = document.createTextNode(data.Actors);
-            awards = document.createTextNode(data.Awards),
-            country = document.createTextNode(data.Country),
-            director = document.createTextNode(data.Director),
-            genre = document.createTextNode(data.Genre),
-            metascore = document.createTextNode(data.Metascore),
-            plot = document.createTextNode(data.Plot),
-            poster = document.createTextNode(data.Poster),
-            rated = document.createTextNode(data.Rated),
-            released = document.createTextNode(data.Released),
-            //if response true, do stuff
-            response = document.createTextNode(data.Response),
-            runtime = document.createTextNode(data.Runtime),
-            title = document.createTextNode(data.Title),
-            type = document.createTextNode(data.Type),
-            write = document.createTextNode(data.Writer),
-            year = document.createTextNode(data.Year),
-            imdb_id = document.createTextNode(data.imdbID),
-            imdb_rating = document.createTextNode(data.imdbRating),
-            imdb_votes = document.createTextNode(data.imdbVotes),
-            language = document.createTextNode(data.Language);
+        console.log(data);
+        if (data.Response == 'True') {
+          document.getElementById('movie_head').style.display = 'block';
+          var movie_title = document.getElementById('movie_title');
+          var movie_rated = document.getElementById('movie_rated');
+          var movie_runtime = document.getElementById('movie_runtime');
+          var movie_genre = document.getElementById('movie_genre');
+          var movie_released = document.getElementById('movie_released');
+          var movie_country = document.getElementById('movie_country');
+          var movie_rating = document.getElementById('movie_rating');
+          var movie_votes = document.getElementById('movie_votes');
 
-        node.appendChild(actors);
-        document.getElementById('movie_details_section').appendChild(node);
+          movie_title.innerHTML = data.Title +
+          '<a href="#"><span class="movie_year"> (' + data.Year + ') </span</a>';
+          movie_rated.innerHTML = data.Rated + " | ";
+          movie_runtime.innerHTML = data.Runtime + " | ";
+          movie_genre.innerHTML = data.Genre + " | ";
+          movie_released.innerHTML = data.Released;
+          movie_country.innerHTML = "(" + data.Country + ")";
+          movie_rating.innerHTML = data.imdbRating;
+          movie_votes.innerHTML = data.imdbVotes;
+        }
       }
     });
   });
