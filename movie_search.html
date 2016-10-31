@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Internet Movie Database</title>
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+
+<body>
+ <div class="container">
+   <div class="navigation-bar">
+     <div class="details-top-bar">
+       <div class="imdb_logo left">
+         <img src="/assets/img/imdb_logo.png"
+              class="imdb_logo_image"
+              alt="imdb_logo">
+       </div>
+       <div class="nav_bar_content left">
+         <div class="upper_nav_content">
+           <input type="text"
+                  id="main_movie_search"
+                  class="search_movie_bar left  "
+                  name="search_movie_bar"
+                  placeholder="Find Movies, TV shows, Celebrities and more..."/>
+            <select type="text"
+                    class="search_category left"
+                    name="search_category">
+              <option>All</option>
+              <option>Titles</option>
+              <option>TV Episodes</option>
+              <option>Names</option>
+              <option>Companies</option>
+              <option>Keywords</option>
+              <option>Characters</option>
+              <option>Quotes</option>
+              <option>Bios</option>
+              <option>Plots</option>
+              <option><a href="advanced_search">Advanced Search »</a></option>
+            </select>
+            <a href="#">
+              <img src="/assets/img/search_icon.png"
+                    id="search_icon"
+                   class="search_icon left"
+                   alt="imdb_logo"
+                   height="34"
+                   width="35">
+            </a>
+            <img src="http://i.media-imdb.com/images/SF4a741137cf9a260e127fef64455ebfbc/navbar/imdbpro_logo_nb.png"
+                 class="imdb_pro_icon left">
+             <p class="segment_line left"> | </p>
+             <a href="help"
+                class="help_link left"
+             >Help</a>
+             <img src="/assets/img/facebook-icon.png"
+                  class="facebook_icon left">
+             <img src="/assets/img/twitter-icon.png"
+                  class="twitter_icon left">
+             <img src="/assets/img/instagram-icon.jpg"
+                  class="instagram_icon left">
+         </div>
+         <div class="lower_nav_content">
+              <p class="dropdown_nav_categories left">
+                <a href="#">Movies</a>,
+                <a href="#">TV</a><br>
+                &amp; <a href="#">Showtimes</a></p>
+              <p class="dropdown_nav_categories left">
+                 <a href="#">Celebs</a>,
+                 <a href="#">Events</a><br>
+                 &amp; <a href="#">Photos</a></p>
+              <p class="dropdown_nav_categories left">
+               <a href="#">News</a><br>
+               &amp; <a href="#">Community</a></p>
+              <p class="dropdown_nav_categories category_watchlist left">
+                <a href="#">Watchlist</a><br></p>
+              <span class="facebook_sign_in left">
+                <a href="#" class="left">Sign in with Facebook</a>
+              </span>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="lower_content">
+       <script id="movie_list" type="text/x-handlebars-template">
+         <div id="icon_movie" class="movie_block left" data-id={{imdbID}}>
+           <p>{{ Title }}</p>
+           <p>{{ Type }}</p>
+           <p>{{ Year }}</p>
+         </div>
+       </script>
+   </div>
+ </div>
+
+<script src="/assets/js/jquery-3.1.0.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/handlebars-v4.0.5.js"></script>
+</body>
+
+</html>
