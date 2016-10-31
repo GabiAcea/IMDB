@@ -294,3 +294,20 @@ a {
   font-weight: 500;
   color: silver;
 }
+
+.movie_block {
+  width: 220px;
+  height: 220px;
+  /*background-color: rgb(222, 223, 224);*/
+  margin: 19px;
+  border-radius: 10px;
+}
+
+.movie_block p {
+  text-align: center;
+  padding: 15px;
+  font: 20px Arial,sans-serif;
+  font-weight: normal;
+  color: rgba(169, 184, 209, 0.9);
+  border-radius: 10px;
+}

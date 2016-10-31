@@ -34,4 +34,37 @@ function searchMovieByTitle() {
   });
 }
 
+function searchMoviesByInput() {
+  document.getElementById('main_movie_search').addEventListener("input",  function() {
+    var input_data = document.getElementById('main_movie_search').value;
+
+    $.ajax({
+      url: "http://www.omdbapi.com/?s=" + input_data + "&plot=short&r=json",
+      cache: false,
+      success: function(data){
+        $('.movie_block').remove();
+        if (data.Search != undefined) {
+          var result_lenght = data.Search.length;
+          for (var i = 0; i < result_lenght; i++) {
+            //get template block
+            var templateScript = $("#movie_list").html();
+            // create handlebar with the data from json
+            var template = Handlebars.compile(templateScript);
+            //append template to view
+            $(document.body).append(template(data.Search[i]));
+            console.log(data.Search[i]);
+            // if (data.Search[i].Poster != undefined) {
+              var picture_link = data.Search[i].Poster;
+              $('.movie_block').css('background-image', url("'" + data.Search[i].Poster  + "'"));
+              // var movie_block =$(".movie_block").find("[data-id='" + data.Search[i].imdbID + "']");
+              movie_block.css('background-image', 'url(' + data.Search[i].imdbID + ')');
+            // }
+          }
+        }
+      }
+    });
+  });
+}
+
 searchMovieByTitle();
+searchMoviesByInput();
