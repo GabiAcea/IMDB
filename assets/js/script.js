@@ -58,6 +58,7 @@ function searchMoviesByInput() {
               $('.movie_block').css('background-image', url("'" + data.Search[i].Poster  + "'"));
               // var movie_block =$(".movie_block").find("[data-id='" + data.Search[i].imdbID + "']");
               movie_block.css('background-image', 'url(' + data.Search[i].imdbID + ')');
+
             // }
           }
         }
