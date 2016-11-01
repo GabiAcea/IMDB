@@ -1,12 +1,13 @@
 function searchMovieByTitle() {
   document.getElementById('search_icon').addEventListener("click",  function() {
     var input_data = document.getElementById('main_movie_search').value;
-    var search_category = $('.search_category :selected');
+    var search_category = $('.search_category :selected').val();
     console.log(search_category);
     $.ajax({
-      url: "http://www.omdbapi.com/?t=" + input_data + "&plot=short&r=json",
+      url: "http://www.omdbapi.com/?t=" + input_data + "&plot=full&r=json",
       cache: false,
       success: function(data) {
+        console.log(data);
           document.getElementById('movie_head').style.display = 'block';
           var movie_title = document.getElementById('movie_title');
           var movie_rated = document.getElementById('movie_rated');
@@ -16,6 +17,7 @@ function searchMovieByTitle() {
           var movie_country = document.getElementById('movie_country');
           var movie_rating = document.getElementById('movie_rating');
           var movie_votes = document.getElementById('movie_votes');
+          //todo append the movie content details on id="movie_content"
 
           movie_title.innerHTML = data.Title +
           '<a href="#"><span class="movie_year"> (' + data.Year + ') </span</a>';
